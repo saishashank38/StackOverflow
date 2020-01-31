@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0724EA97C5DEC9758DA2F3EA /* Pods_StackOverflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291EC0F585DF2EB66E2119CB /* Pods_StackOverflow.framework */; };
+		32344B1523E45DD800CC40F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32344B1423E45DD800CC40F2 /* Constants.swift */; };
+		32344B1823E45F0A00CC40F2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32344B1723E45F0A00CC40F2 /* Reachability.swift */; };
+		32344B1B23E45F3800CC40F2 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32344B1A23E45F3800CC40F2 /* UIViewController+Ext.swift */; };
+		32344B1E23E45F7E00CC40F2 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32344B1D23E45F7E00CC40F2 /* WebServiceManager.swift */; };
+		32344B2123E4606600CC40F2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32344B2023E4606600CC40F2 /* Question.swift */; };
+		32344B2323E4607A00CC40F2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32344B2223E4607A00CC40F2 /* Items.swift */; };
 		325DF74923E417100021BF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DF74823E417100021BF5A /* AppDelegate.swift */; };
-		325DF74B23E417100021BF5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DF74A23E417100021BF5A /* SceneDelegate.swift */; };
 		325DF74D23E417100021BF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DF74C23E417100021BF5A /* ViewController.swift */; };
 		325DF75023E417100021BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325DF74E23E417100021BF5A /* Main.storyboard */; };
 		325DF75223E417130021BF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325DF75123E417130021BF5A /* Assets.xcassets */; };
@@ -19,9 +24,14 @@
 /* Begin PBXFileReference section */
 		04C0B14A5D2D1FC1FF889A60 /* Pods-StackOverflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflow.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflow/Pods-StackOverflow.debug.xcconfig"; sourceTree = "<group>"; };
 		291EC0F585DF2EB66E2119CB /* Pods_StackOverflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32344B1423E45DD800CC40F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		32344B1723E45F0A00CC40F2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		32344B1A23E45F3800CC40F2 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		32344B1D23E45F7E00CC40F2 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		32344B2023E4606600CC40F2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		32344B2223E4607A00CC40F2 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		325DF74523E417100021BF5A /* StackOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325DF74823E417100021BF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		325DF74A23E417100021BF5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		325DF74C23E417100021BF5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		325DF74F23E417100021BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		325DF75123E417130021BF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +52,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32344B1323E45D6700CC40F2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				32344B1423E45DD800CC40F2 /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		32344B1623E45EF700CC40F2 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				32344B1723E45F0A00CC40F2 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		32344B1923E45F2300CC40F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32344B1A23E45F3800CC40F2 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32344B1C23E45F7000CC40F2 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				32344B1D23E45F7E00CC40F2 /* WebServiceManager.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		32344B1F23E4605B00CC40F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32344B2023E4606600CC40F2 /* Question.swift */,
+				32344B2223E4607A00CC40F2 /* Items.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		325DF73C23E417100021BF5A = {
 			isa = PBXGroup;
 			children = (
@@ -63,8 +114,12 @@
 		325DF74723E417100021BF5A /* StackOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				32344B1F23E4605B00CC40F2 /* Models */,
+				32344B1C23E45F7000CC40F2 /* WebServices */,
+				32344B1923E45F2300CC40F2 /* Extensions */,
+				32344B1623E45EF700CC40F2 /* Reachability */,
+				32344B1323E45D6700CC40F2 /* Util */,
 				325DF74823E417100021BF5A /* AppDelegate.swift */,
-				325DF74A23E417100021BF5A /* SceneDelegate.swift */,
 				325DF74C23E417100021BF5A /* ViewController.swift */,
 				325DF74E23E417100021BF5A /* Main.storyboard */,
 				325DF75123E417130021BF5A /* Assets.xcassets */,
@@ -88,7 +143,6 @@
 				04C0B14A5D2D1FC1FF889A60 /* Pods-StackOverflow.debug.xcconfig */,
 				EE553451D47BB296353C5A19 /* Pods-StackOverflow.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,8 +262,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				325DF74D23E417100021BF5A /* ViewController.swift in Sources */,
+				32344B2123E4606600CC40F2 /* Question.swift in Sources */,
+				32344B1E23E45F7E00CC40F2 /* WebServiceManager.swift in Sources */,
 				325DF74923E417100021BF5A /* AppDelegate.swift in Sources */,
-				325DF74B23E417100021BF5A /* SceneDelegate.swift in Sources */,
+				32344B2323E4607A00CC40F2 /* Items.swift in Sources */,
+				32344B1B23E45F3800CC40F2 /* UIViewController+Ext.swift in Sources */,
+				32344B1823E45F0A00CC40F2 /* Reachability.swift in Sources */,
+				32344B1523E45DD800CC40F2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StackOverflow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StackOverflow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
