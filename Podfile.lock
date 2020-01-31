@@ -1,0 +1,22 @@
+PODS:
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - SwiftLint (0.38.2)
+
+DEPENDENCIES:
+  - NVActivityIndicatorView
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - NVActivityIndicatorView
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+
+PODFILE CHECKSUM: 55ba2b282ae3a3b387cd3f63e5918b35a9f215ee
+
+COCOAPODS: 1.8.4
