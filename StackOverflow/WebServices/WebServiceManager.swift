@@ -38,9 +38,10 @@ class WebServiceManager {
                         do {
                             let decoder = JSONDecoder()
                             let items = try decoder.decode(Items.self, from: rData)
-                            print("Received: \(items.items.count)")
+                            print("Received: \(items.items)")
                             completionHandler(items.items.filter { question in
-                                return question.isAnswered == true && question.answerCount > 1
+                                /// As per the requirement, a question must have an accepted answer and contain more than one answer
+                                return question.acceptedAnswerId != nil && question.answerCount > 1
                             }, nil)
                         } catch {
                             print(error)
