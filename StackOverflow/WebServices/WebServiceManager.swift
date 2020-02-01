@@ -8,11 +8,15 @@
 
 import Foundation
 
+
+/// Class that performs web service calls, checks associated with network, parsing etc
 class WebServiceManager {
+    /// Singleton object to access the object
     static let manager = WebServiceManager()
     let session = URLSession(configuration: .default)
     var reachability: Reachability?
     
+    /// inititalize the variables here
     private init() {
         do {
             reachability = try Reachability()
@@ -21,6 +25,8 @@ class WebServiceManager {
         }
     }
     
+    /// Method to fetch stack overflow questions by placing webservice call
+    /// - Parameter completionHandler: Closure that returns either set of questions received or error is returned
     func fetchQuestions(completionHandler:@escaping ([Question]?, Error?) -> Void) {
         if reachability?.connection != .unavailable {
             let url = Constants.api + Constants.apiKey

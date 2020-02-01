@@ -9,6 +9,8 @@
 import UIKit
 
 @UIApplicationMain
+
+/// Class that handles the delegates related to UIApplication
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 

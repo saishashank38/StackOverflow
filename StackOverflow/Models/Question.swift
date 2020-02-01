@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model for holding Question details
 struct Question: Codable {
     let title: String
     let isAnswered: Bool

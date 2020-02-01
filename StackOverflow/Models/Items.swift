@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+/// Model to hold all the questions at high level
 struct Items: Codable {
     var items: [Question]
 }
